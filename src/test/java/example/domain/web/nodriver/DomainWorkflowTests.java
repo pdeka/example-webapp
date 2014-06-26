@@ -1,5 +1,7 @@
 package example.domain.web.nodriver;
 
+import example.documentation.AppliesToStories;
+import example.documentation.Story;
 import org.junit.Test;
 
 public class DomainWorkflowTests {
@@ -7,6 +9,7 @@ public class DomainWorkflowTests {
     private Browser browser = new Browser();
 
     @Test
+    @AppliesToStories({Story.GTR101, Story.GTR102})
     public void shouldStoreFormDetailsCorrectly() {
         IndexPage indexPage = browser.get("/forms", IndexPage.class);
 
@@ -24,6 +27,7 @@ public class DomainWorkflowTests {
     }
 
     @Test
+    @AppliesToStories(Story.GTR102)
     public void shouldRedisplayFormWithErrorMessages() {
         IndexPage indexPage = browser.get("/forms", IndexPage.class);
 

@@ -1,5 +1,7 @@
 package example.domain.web.binding;
 
+import example.documentation.AppliesToStories;
+import example.documentation.Story;
 import example.domain.Identity;
 import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
@@ -16,6 +18,7 @@ import static org.junit.Assert.assertThat;
 public class CustomBindingInititalizerTests {
 
     @Test
+    @AppliesToStories({Story.GTR101, Story.GTR102})
     public void shouldBindNewIdentityForGetRequestsWhenTextValueIsNew() throws Exception {
         WebDataBinder binder = new WebDataBinder(new Object());
         NativeWebRequest request = new ServletWebRequest(new MockHttpServletRequest("GET", "/foo.go"));
@@ -32,6 +35,7 @@ public class CustomBindingInititalizerTests {
     }
 
     @Test
+    @AppliesToStories({Story.GTR101, Story.GTR102})
     public void shouldBindGeneratedIdentityForPostRequestsWhenTextValueIsNew() throws Exception {
         WebDataBinder binder = new WebDataBinder(new Object());
         NativeWebRequest request = new ServletWebRequest(new MockHttpServletRequest("POST", "/foo.go"));

@@ -1,5 +1,7 @@
 package example.domain.web.nodriver;
 
+import example.documentation.AppliesToStories;
+import example.documentation.Story;
 import org.apache.commons.lang.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -10,14 +12,13 @@ import org.springframework.mock.web.MockHttpServletResponse;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.text.pattern.PatternMatcher.matchesPattern;
-import static org.hamcrest.text.pattern.Patterns.anyCharacterIn;
-import static org.hamcrest.text.pattern.Patterns.exactly;
-import static org.hamcrest.text.pattern.Patterns.sequence;
+import static org.hamcrest.text.pattern.Patterns.*;
 import static org.junit.Assert.assertThat;
 
 public class ExceptionHandlingIntegrationTests {
 
     @Test
+    @AppliesToStories({Story.GTR101, Story.GTR102})
     public void shouldSeeErrorReferenceDisplayedOnThePage() throws Exception {
         SpringDispatcherServlet servlet = SpringDispatcherServlet.create();
 
