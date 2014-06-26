@@ -6,4 +6,4 @@ Connecting story narratives to code level artifacts
 ---------------------------------------------------
 
 The build produce a report called Story Report (/build/reports/tests/story-report.html) which connects tests to
-stories that they were written for.
+stories that they were written for. Run './gradlew' to create the report.
