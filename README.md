@@ -1,6 +1,6 @@
 Description
 ===========
-This is both a template java enterprise web application. The repo was forked from a project by [Tom Czarniecki](http://tomczarniecki.com).
+This is both a template java enterprise web application. The repo was forked from a project by [Tom Czarniecki](https://github.com/tomcz).
 
 Connecting story narratives to code level artifacts
 ---------------------------------------------------
