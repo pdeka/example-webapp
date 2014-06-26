@@ -1,10 +1,13 @@
 package example.domain.web.webdriver;
 
+import example.documentation.AppliesToStories;
+import example.documentation.Story;
 import org.junit.Test;
 
 public class DomainWorkflowTests {
 
     @Test
+    @AppliesToStories({Story.GTR101, Story.GTR102})
     public void shouldStoreFormDetailsCorrectly() {
         Browser browser = Application.open("/example");
 
@@ -22,6 +25,7 @@ public class DomainWorkflowTests {
     }
 
     @Test
+    @AppliesToStories(Story.GTR103)
     public void shouldRedisplayFormWithErrorMessages() {
         Browser browser = Application.open("/example");
         browser.shows(IndexPage.class).createNewForm();

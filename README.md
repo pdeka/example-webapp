@@ -1,3 +1,9 @@
-This is both a template project for my J2EE applications and an idea bucket for how to create, configure and code
-web applications. It represents some of the ideas that I have either encountered or am experimenting with at any
-given moment.
+Description
+===========
+This is both a template java enterprise web application. The repo was forked from a project by [link Tom Czarniecki](#http://tomczarniecki.com).
+
+Connecting story narratives to code level artifacts
+---------------------------------------------------
+
+The build produce a report called Story Report (/build/reports/tests/story-report.html) which connects tests to
+stories that they were written for.
